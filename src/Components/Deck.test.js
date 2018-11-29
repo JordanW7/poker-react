@@ -7,9 +7,11 @@ import { Card } from "../Styles/Styled";
 
 import { suits, values } from "../utils";
 
+const selectedCards = {}
+
 describe(`Card deck`, () => {
 	test('renders the right amount of cards', () => {
-		const deck = mount(<Deck suits={suits} values={values} />)
+		const deck = mount(<Deck suits={suits} values={values} selectedCards={selectedCards}/>)
 		expect(deck.find(Card)).toHaveLength(52);
 	});
 });
