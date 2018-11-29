@@ -96,3 +96,27 @@ export const PlayerHand = styled.div`
 	border-radius: 5px;
 	min-height: 55px;
 `;
+
+export const Alert = styled.div`
+	position: fixed;
+	top: 50px;
+	z-index: 999999;
+    padding: 20px;
+    background-color: ${props => props.type === "win" ? "#6FBC6F" : "#f44336" };
+    color: white;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #bbb;
+    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+`;
+
+export const AlertClose = styled.div`
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+`;

@@ -10,11 +10,7 @@ class Deck extends Component {
 		{this.props.suits.map(suit => (
 			<div key={suit}>
 				{this.props.values.map(value => (
-					<Card key={suit+value} suit={suit} value={value} selected={suit === this.state.selected.suit && value === this.state.selected.value}
-						onClick={() =>{
-							this.props.addCard(suit, value);
-							this.setState({selected: {suit, value}});
-						}}
+					<Card key={suit+value} suit={suit} value={value} selected={this.props.selectedCards[suit+value]}
 						>
 						{value}
 					</Card>
