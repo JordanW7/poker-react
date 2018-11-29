@@ -37,6 +37,7 @@ export const Card = styled.div`
 	text-align: center;
 	margin: 5px;
 	font-weight: 700;
+	cursor: default;
 
 	border: 2px solid;
 	border-color: ${props => getColourForSuit(props.suit)};
